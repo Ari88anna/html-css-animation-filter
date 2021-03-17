@@ -111,13 +111,14 @@
     font-size: 60px;
     /* soluzione */
     animation-name: round-and-round;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-direction: reverse;
 }
 @keyframes round-and-round {
     100% {
-        transform: rotate(-360deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -138,7 +139,7 @@
 }
 
 
-/* esercizio 12 */
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -168,3 +169,114 @@
     width: 60px;
     height: 20px;
 }
+
+/* esercizio 12  */
+/* soluzione */
+.ex-12-button:hover .ex-12-top-white {
+    animation-name: to-right;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    
+
+}
+@keyframes to-right {
+    0% {
+        top:-10px;
+        left: 10%; 
+    }
+    50%{
+        top: -10px;
+        left: 60%;
+    }
+    100%{
+        top:-10px;
+        left: 10%;        
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation-name: to-left;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+} 
+@keyframes to-left {
+    0% {
+        bottom:-10px;
+        right: 20%; 
+    }
+    50%{
+        bottom: -10px;
+        right: 60%;
+    }
+    100%{
+        bottom:-10px;
+        right: 20%;        
+    }
+} 
+
+/* esercizio 13  */
+/* soluzione */
+.ex-13-button:hover .ex-13-top-white {
+    animation-name: top-to-left;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+@keyframes top-to-left {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+    15% {
+        top: -10px;
+        left: 75%;
+    }
+    30% {
+        top: 60px;
+        left: 75%;
+    }
+    50% {
+        top: 60px;
+        left:-3%;
+    }
+    70%{
+        left: -3%;
+        top:-10px;
+    }
+    100% {
+        top: -10px;
+        left: 10%; 
+    }  
+}
+
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation-name: top-to-right;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+@keyframes top-to-right {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    15%{
+        bottom: -10px;
+        right: 90%;
+    }
+    30% {
+        bottom: 60px;
+        left: -3%;
+    }
+    50% {
+        top: -10px;
+        left: 90%;
+    }
+    70% {
+        top: 60px;
+        left: 90%;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    } 
+} 
